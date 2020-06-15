@@ -1,5 +1,6 @@
 package creational.factorymethod;
 
+import creational.factorymethod.factory.SomeAbstractFactory;
 import creational.factorymethod.factory.SomeFactory;
 import creational.factorymethod.factory.SomeOtherFactory;
 import creational.factorymethod.model.SomeClass;
@@ -11,11 +12,11 @@ public class FactoryExample {
 
     public static void main(String[] args) {
         // Verkrijg een instantie van de Factory en doe de operatie
-        final SomeFactory factory = new SomeFactory();
+        final SomeAbstractFactory factory = new SomeFactory();
         factory.doSomething();
 
         // Verkrijg een instantie van een andere Factory en doe de operatie
-        final SomeOtherFactory otherFactory = new SomeOtherFactory();
+        final SomeAbstractFactory otherFactory = new SomeOtherFactory();
         otherFactory.doSomething();
 
         /** Hier gebruiken we rechtstreeks de Factory methode {@link SomeClass#create(String)}
