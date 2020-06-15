@@ -26,9 +26,13 @@ public class AdapterExample {
         // We pluggen onze adapter in het stopcontact en laten de stroom vloeien.
         powerOutlet.plugIn(adapter);
 
+        // We trekken de stekker er terug uit
+        powerOutlet.unplug();
+
         /* Output:
          * Three Prong Power Outlet Giving Power
          * Using Two Prong Charging Cable
+         * Disconnected
          */
     }
 }

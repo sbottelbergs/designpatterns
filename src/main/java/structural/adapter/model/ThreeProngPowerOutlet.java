@@ -31,6 +31,9 @@ public class ThreeProngPowerOutlet implements PowerOutlet {
      * Trek de stekker uit het stopcontact.
      */
     public void unplug() {
-        this.plug = null;
+        if (plug != null) {
+            System.out.println("Disconnected");
+            this.plug = null;
+        }
     }
 }
