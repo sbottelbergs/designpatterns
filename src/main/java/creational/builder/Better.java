@@ -38,12 +38,39 @@ public class Better {
                 '}';
     }
 
+    /**
+     * Door gebruik te maken van een Builder, kunnen we het doorgeven van de verschillende onderdelen voor het aanmaken
+     * van de klasse veel explicieter maken. We dwingen namelijk af dat we gebruik moeten maken van
+     * omschrijvende setters, in plaats van een aanschakeling van anonieme constructor argumenten.
+     *
+     * Voor een aantal verplichte argumenten kunnen we ook een niet-default constructor introduceren, bijvoorbeeld
+     * Builder(String aString) om af te dwingen dat we minstens "aString" moeten meegeven om een geldige instantie van
+     * de {@link Better} klasse te kunnen verkrijgen.
+     */
     public static class Builder {
         private String aString;
         private String anotherString;
         private String aThirdString;
         private boolean aBoolean;
         private boolean anotherBoolean;
+
+        /**
+         * Default constructor
+         */
+        public Builder() {
+        }
+
+        /**
+         * Indien aString verplicht is om een geldige instantie van {@link Better} te verkrijgen,
+         * kunnen we de default constructor hierboven weglaten. Zo dwingen we af dat men steeds "aString" moet
+         * meegeven aan de constructor van de Builder, en deze dus altijd minstens gezet zal zijn:
+         * Voorbeeld: Better better = new Better.Builder("A String").build();
+         *
+         * @param aString de waarde van aString
+         */
+        public Builder(String aString) {
+            this.aString = aString;
+        }
 
         public void setAString(String aString) {
             this.aString = aString;
@@ -79,7 +106,7 @@ public class Better {
     /**
      * Om het nog iets gemakkelijker te maken, kunnen we gebruik maken van een Fluent builder.
      * Dit type van builder geeft telkens een instantie van zichzelf terug, zodat operaties vlak na mekaar
-     * kunnen worden toegepast, beter bekend als method chaining.
+     * kunnen worden toegepast, ook gekend als method chaining.
      *
      * Dit herken je normaal gezien van de builders die Lombok genereert
      */
