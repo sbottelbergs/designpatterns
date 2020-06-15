@@ -1,4 +1,7 @@
-package creational.abstractfactory;
+package creational.abstractfactory.factory;
+
+import creational.abstractfactory.model.AquaticVehicle;
+import creational.abstractfactory.model.RoadVehicle;
 
 /**
  * Interface voor de Factory. Voorziet 2 methodes om telkens een bepaald type van voertuig aan te maken.

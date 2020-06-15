@@ -1,4 +1,9 @@
-package creational.abstractfactory;
+package creational.abstractfactory.factory;
+
+import creational.abstractfactory.model.AquaticVehicle;
+import creational.abstractfactory.model.Motorcycle;
+import creational.abstractfactory.model.RoadVehicle;
+import creational.abstractfactory.model.SpeedBoat;
 
 /**
  * Factory voor awesome voertuigen.
