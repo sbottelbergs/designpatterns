@@ -15,7 +15,7 @@ import structural.proxy.proxy.RestrictedInternetConnection;
  *
  * De proxy kan ook bepaalde precondities zetten, of bijvoorbeeld security toevoegen op een http call.
  */
-public class ProxyPatternExample {
+public class ProxyExample {
     public static void main(String[] args) {
         // Met een default internet connectie kunnen we rechtstreeks aan het internet.
         System.out.println("*** DEFAULT CONNECTION ***");
