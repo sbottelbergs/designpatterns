@@ -1,4 +1,4 @@
-package behavioural.observer;
+package behavioural.observer.observer;
 
 /**
  * Interface voor de Observer.

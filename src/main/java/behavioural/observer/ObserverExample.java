@@ -1,5 +1,9 @@
 package behavioural.observer;
 
+import behavioural.observer.observer.Observer;
+import behavioural.observer.observer.ObserverImpl;
+import behavioural.observer.observer.Subject;
+
 /**
  * Het Observer patroon is een patroon waarbij we werken met 2 types van objecten: Observers en Subjects.
  * Een Subject is een object dat zijn Observers op de hoogte brengt van veranderingen in zijn interne state.
